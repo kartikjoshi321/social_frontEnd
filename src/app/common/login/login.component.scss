@@ -1,0 +1,27 @@
+.invalid{
+    display:block !important;
+    text-align:left;
+}
+
+.container-width{
+    padding-top:100px;
+}
+.btn-theme{
+    background: #DDCCA8;
+    border: 1px solid #DDCCA8;
+    color: #231f20;
+  }
+  .text-theme{
+      color: #ddcca8;
+  }
+
+.invalid{
+    display:block !important;
+    text-align:left;
+}
+
+@media screen and (max-width:1199px) {
+    .container-width {
+        padding: 0 30px 20px;
+    }
+}

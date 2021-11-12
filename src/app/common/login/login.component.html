@@ -1,0 +1,42 @@
+<div class="container form-vertical container-width">
+
+  <form [formGroup]="loginForm" (submit)="login()" id="login">
+    <!-- loginForm.controls.email or loginForm.controls.password -->
+    <div class="row">
+      <div class="col-12 m-auto text-center p-3 pb-4">
+        <a routerLink="/"> <img src="../assets/images/logo.png" alt="logo" class="img-fluid mt-3"> </a>
+      </div>
+      <div class="col-md-5  m-auto bg-white rounded p-3">
+        <h2 class="h2 pl-3 mb-0 font-weight-bold text-theme">Welcome,</h2>
+        <h4 class="h4 pl-3 pb-3">Sign in to Continue</h4>
+        <div class="col-md-12 form-group">
+          <label for="email">Email Address</label>
+          <input formControlName="email" type="text" name="email" id="login-email" class="form-control"
+            placeholder="Email address" required />
+          <div class="invalid invalid-feedback" *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched">
+            Email id is required*
+          </div>
+          <div class="invalid invalid-feedback" *ngIf="loginForm.get('email').hasError('pattern') && loginForm.get('email').touched">
+            Email is not valid
+          </div>
+        </div>
+        <div class="col-md-12 form-group">
+          <label for="password">Password</label>
+          <input formControlName="password" type="password" name="password" id="registration-password"
+            id="password" class="form-control" placeholder="Password" required />
+          <div class="invalid invalid-feedback" *ngIf=" loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+            Password is required*
+          </div>
+        </div>
+
+        <a class="ml-3 text-secondary" routerLink="/user/forgot-password">Forgot Password?</a>
+        <a class="ml-3 text-secondary" routerLink="/user/register">Create Account</a>
+        <div class="col-md-12 form-group mt-3">
+          <button class="btn btn-theme btn-lg btn-block" [disabled]="loginForm.invalid" type="submit">Login</button>
+        </div>
+
+      </div>
+    </div>
+  </form>
+  
+</div>

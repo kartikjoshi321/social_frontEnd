@@ -1,0 +1,19 @@
+<header class="header_body">
+    <div class="row">
+
+        <div class="col-md-6">
+            <!-- <h3 class="text-white">Business Admin</h3> 
+            <img src="/assets/images/logo.png">-->
+        </div>
+        <!-- <div class="col-md-2">
+
+        </div> -->
+        <div class="col-md-6 py-2 pr-3 flex-row-reverse text-right">
+            <!-- <button routerLink="/message-settings" routerLinkActive="active" class="btn btn-theme">Messsage Settings</button> -->
+            <button *ngIf="!commonService.getToken()" routerLink="/login" routerLinkActive="active" class="btn btn-theme ml-2">Login</button>
+            <button *ngIf="commonService.getToken()" (click)="signOut()" class="btn btn-theme ml-2">SignOut</button>
+
+        </div>
+
+    </div>
+</header>

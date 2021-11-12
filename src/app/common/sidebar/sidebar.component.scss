@@ -1,0 +1,31 @@
+.leftNav .dropdown-menu {
+    width: 100%;
+    background: rgb(220, 201, 162) none repeat scroll 0% 0%;
+    position: absolute;
+    transform: none !important;
+    top: 50px !important;
+    left: 0px !important;
+}
+.leftNav .dropdown-item {
+    padding: 10px 0.5rem !important;
+}
+.leftNav .dropdown-item:hover {
+    background-color: #a7926c;
+}
+.leftNav .dropdown-toggle::after {
+	right: 15px !important;
+	position: absolute;
+	top: 25px !important;
+}
+
+.leftNav nav ul {
+    height: calc(100vh - 240px);
+    overflow: auto;
+}
+.dropdown-menu a {
+    font-size: 0.7rem;
+letter-spacing: -0.6px;
+}
+.active{
+    background: #af8e4a !important;
+  }
